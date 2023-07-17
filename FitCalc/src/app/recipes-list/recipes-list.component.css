@@ -1,0 +1,40 @@
+    /* Стилове за контейнера на рецептите */
+    .recipe-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 600px;
+        /* Можете да промените тази стойност според нуждите си */
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-right: 150px;
+        margin-left: 10px;
+        padding: 20px;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+    }
+
+    /* Стилове за отделните рецепти */
+    .recipe {
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        overflow: hidden;
+    }
+
+    /* Стилове за снимката */
+    .recipe img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Стилове за заглавието на рецептата */
+    .recipe h2 {
+        margin-top: 0;
+    }
+
+    /* Стилове за информацията за рецептата */
+    .recipe p {
+        margin: 0;
+    }
