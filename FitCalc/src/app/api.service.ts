@@ -10,13 +10,13 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getRecipe(id: string) {
-    const { appUrl } = environment;
-    return this.http.get<Recipe>(`${appUrl}/themes/${id}`);
+    const { apiUrl } = environment;
+    return this.http.get<Recipe>(`${apiUrl}/recipe/${id}`);
   }
 
   getRecipes() {
-    const { appUrl } = environment;
-    return this.http.get<Recipe[]>(`${appUrl}/themes`);
+    const { apiUrl } = environment;
+    return this.http.get<Recipe[]>(`${apiUrl}/recipes`);
   }
 
   // getPosts(limit?: number) {

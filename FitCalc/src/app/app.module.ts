@@ -9,6 +9,8 @@ import { RecipesListComponent } from './recipes-list/recipes-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import { UserModule } from './user/user.module';
 import { RecipeModule } from './recipe/recipe.module';
+import { HttpClientModule } from '@angular/common/http';
+import { appInterceptorProvider } from './app.interceptor';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,14 @@ import { RecipeModule } from './recipe/recipe.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     CoreModule,
     SharedModule,
     UserModule,
     RecipeModule,
     AppRoutingModule,
     ],
-  providers: [],
+  providers: [appInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
