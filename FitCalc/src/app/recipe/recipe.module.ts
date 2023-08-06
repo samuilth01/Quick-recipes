@@ -6,16 +6,18 @@ import { EditComponent } from './edit/edit.component';
 import { RecipeRoutingModule } from './recipe-routing.module';
 
 
-
 @NgModule({
   declarations: [
     AddRecipeComponent,
     CurrentRecipeComponent,
-    EditComponent
+    EditComponent,
   ],
   imports: [
     CommonModule,
     RecipeRoutingModule
+  ],
+  exports: [
+    CurrentRecipeComponent
   ]
 })
 export class RecipeModule { }

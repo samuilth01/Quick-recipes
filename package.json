@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ng serve --proxy-config proxy.conf.json"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@angular/cli": "^16.1.1"
+    "@angular/cli": "^16.1.1",
+    "@types/body-parser": "^1.19.2",
+    "typescript": "^5.1.6"
   }
 }

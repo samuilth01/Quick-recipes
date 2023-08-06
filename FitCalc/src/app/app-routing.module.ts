@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './core/not-found/not-found.component';
 import { MainComponent } from './main/main.component';
 import { ErrorComponent } from './core/error/error.component';
+import { RecipesListComponent } from './recipes-list/recipes-list.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'home',
     component: MainComponent,
+  },
+  {
+    path: 'recipies',
+    component: RecipesListComponent,
   },
   {
     path: 'auth',

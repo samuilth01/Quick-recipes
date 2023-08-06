@@ -1,6 +1,6 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { User } from '../types/user';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Subscription, tap } from 'rxjs';
 
 @Injectable({
@@ -35,10 +35,10 @@ export class UserService implements OnDestroy {
     username: string,
     email: string,
     password: string,
-    rePassword: string,
+    rePassword: string
   ) {
     return this.http
-      .post<User>('/api/register', {
+      .post<User>('api/register.json', {
         username,
         email,
         password,

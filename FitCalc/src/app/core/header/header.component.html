@@ -1,54 +1,72 @@
-<!-- <body>
-  <ul class="navbar">
-    <li><a href="home.html">Home</a></li>
-    <li><a href="profile.html">Profile</a></li>
-    <li><a href="login.html">Login</a></li>
-    <li><a href="register.html">Register</a></li>
-    <li><a href="diary.html">Diary</a></li>
-    <li><a href="recipes.html">Recipes</a></li>
-  </ul>
-</body> -->
-
-
-
-<header>
-  <div class="mini-navbar-wrap">
-    <div class="logo-wrap">
-      <p class="logo"><span class="logo">Fitness kitchen</span></p>
-    </div>
-
-    <div class="mini-navbar">
-      <ul *ngIf="!isLoggedIn">
-        <li>
-          <a routerLink="/auth/login">Login</a>
-        </li>
-        <li>
-          <a routerLink="/auth/register">Register</a>
-        </li>
-      </ul>
-
-      <ul *ngIf="isLoggedIn">
-        <li>
-          <a routerLink="/auth/profile">{{ firstName }}'s profile</a>
-        </li>
-        <li (click)="logout()">
-          <a>Logout</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <nav>
-    <ul>
-      <li>
-        <a routerLink="/home">Home</a>
-      </li>
-      <li>
-        <a routerLink="/add-recipe">Add recipe</a>
-      </li>
-      <li>
-        <a routerLink="/diary">Diary</a>
-      </li>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a
+      class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red"
+      href="javascript:void(0);"
+      onclick="myFunction()"
+      title="Toggle Navigation Menu"
+      ><i class="fa fa-bars"></i
+    ></a>
+    <a
+      routerLink="/home"
+      class="w3-bar-item w3-button w3-padding-large w3-white"
+      >Home</a
+    >
+    <a
+      routerLink="/recipies"
+      class="w3-bar-item w3-button w3-padding-large w3-white"
+      >Recipies</a
+    >
+    <ul *ngIf="isLoggedIn">
+      <a
+        routerLink="/add-recipe"
+        class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
+        >Add recipe</a
+      >
+      <a
+        routerLink="/auth/profile"
+        class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
+        >Profile</a
+      >
+      <a
+        (click)="logout()"
+        class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
+        >Logout</a
+      >
     </ul>
-  </nav>
-</header>
+  </div>
 
+  <!-- Navbar on small screens -->
+  <div
+    id="navDemo"
+    class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large"
+  >
+    <ul *ngIf="isLoggedIn">
+      <a routerLink="/add-recipe" class="w3-bar-item w3-button w3-padding-large"
+        >Add recipe</a
+      >
+      <a
+        routerLink="/auth/profile"
+        class="w3-bar-item w3-button w3-padding-large"
+        >Profile</a
+      >
+      <a (click)="logout()" class="w3-bar-item w3-button w3-padding-large"
+        >Logout</a
+      >
+    </ul>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding: 128px 16px">
+  <h1 class="w3-margin w3-jumbo">START PAGE</h1>
+  <ul *ngIf="!isLoggedIn">
+    <button
+      routerLink="/auth/login"
+      class="w3-button w3-black w3-padding-large w3-large w3-margin-top"
+    >
+      Get Started
+    </button>
+  </ul>
+</header>

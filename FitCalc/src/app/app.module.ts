@@ -11,12 +11,14 @@ import { UserModule } from './user/user.module';
 import { RecipeModule } from './recipe/recipe.module';
 import { HttpClientModule } from '@angular/common/http';
 import { appInterceptorProvider } from './app.interceptor';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    RecipesListComponent
+    RecipesListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
