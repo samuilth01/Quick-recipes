@@ -14,9 +14,9 @@ export class HeaderComponent {
 		return this.userService.isLogged;
 	}
 
-	get firstName(): string {
-		return this.userService.user?.firstName || '';
-	}
+	// get firstName(): string {
+	// 	return this.userService.user?.firstName || '';
+	// }
 
 	logout(): void {
 		this.userService.logout();

@@ -1,6 +1,6 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { User } from '../types/user';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Subscription, tap } from 'rxjs';
 
 @Injectable({
