@@ -1,3 +1,3 @@
 export const environment = {
-  appirl: 'https://fitcalc-fe658-default-rtdb.firebaseio.com',
+  appirl: 'https://jsonplaceholder.typicode.com',
 };
