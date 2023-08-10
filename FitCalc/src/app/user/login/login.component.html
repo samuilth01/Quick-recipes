@@ -8,8 +8,8 @@
       <input
         type="email"
         placeholder="Email"
+        name="email"
         ngModel
-        [ngModelOptions]="{ standalone: true }"
         #inputEmail="ngModel"
         required
         email
@@ -29,9 +29,9 @@
       <input
         type="password"
         placeholder="Password"
+        name="password"
         #inputPassword="ngModel"
         ngModel
-        [ngModelOptions]="{ standalone: true }"
         required
         minlength="5"
       />

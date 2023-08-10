@@ -1,3 +1,3 @@
 export const environment = {
-  appirl: 'https://jsonplaceholder.typicode.com',
+  appirl: 'http://localhost:3000/api',
 };
